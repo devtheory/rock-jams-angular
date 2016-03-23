@@ -1,9 +1,10 @@
 (function(){
-  function AlbumCtrl(Fixtures){
+  function AlbumCtrl(Fixtures, SongPlayer){
     this.albumData = Fixtures.getAlbum();
+    this.songPlayer = SongPlayer;
   }
 
   angular
     .module('rockJams')
-    .controller('AlbumCtrl', ["Fixtures", AlbumCtrl]); //dependency injection!
+    .controller('AlbumCtrl', ["Fixtures", "SongPlayer", AlbumCtrl]); //dependency injection!
 })();
